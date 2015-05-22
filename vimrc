@@ -38,6 +38,8 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
+"Intall Plugins = vim +PluginInstall +qall"
+
 " Plugins {{{
 filetype off
 

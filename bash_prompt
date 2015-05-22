@@ -1,6 +1,6 @@
 # This prompt is a fork of paulirish
 
-default_username='guilherme'
+default_username='rafaellucio'
 
 if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
     return 1 2> /dev/null || exit 1;
@@ -96,7 +96,7 @@ set_prompts() {
         ## early exit for Chromium & Blink repo, as the dirty check takes ~5s
         repoUrl=$(git config --get remote.origin.url)
         if grep -q chromium.googlesource.com <<<$repoUrl; then
-            dirty=" ⁂"
+            dirty=" *"
         else
 
             # check if it's dirty (slow)
