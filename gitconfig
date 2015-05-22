@@ -54,11 +54,6 @@
 
 
 
-[credential]
-	helper = osxkeychain
-
-
-
 [diff]
 	tool = vimdiff
 
