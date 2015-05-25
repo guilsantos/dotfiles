@@ -14,16 +14,15 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # programs
-alias subl='open -a Sublime\ Text'
 alias webstorm='open -a WebStorm'
 alias safari='open -a safari'
 alias firefox='open -a firefox'
 alias chrome='open -a google\ chrome'
 
 # ls aliases
-alias ls='ls -h'
-alias ll='ls -lhF'
-alias la='ls -lhA'
+alias ls='ls --color=auto -h'
+alias ll='ls -lF'
+alias la='ls -lA'
 alias l='ls -CF'
 
 
