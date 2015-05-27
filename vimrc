@@ -53,6 +53,11 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'ervandew/supertab'
 Plugin 'initrc/eclim-vundle'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ap/vim-css-color'
+Plugin 'bling/vim-airline'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
 
 call vundle#end()
 filetype plugin indent on
