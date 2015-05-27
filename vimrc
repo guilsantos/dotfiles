@@ -56,6 +56,7 @@ Plugin 'initrc/eclim-vundle'
 Plugin 'pangloss/vim-javascript'
 Plugin 'ap/vim-css-color'
 Plugin 'bling/vim-airline'
+Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
 
