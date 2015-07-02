@@ -15,6 +15,7 @@ map <F12> :wqa!<cr>
 " Abreviacoes uteis para sua sanidade mental
 cab W w| cab Q q| cab Wq wq| cab wQ wq| cab WQ wq
 
+
 " Copy e paste
 nmap <F3> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 imap <F3> <Esc>:set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
@@ -28,7 +29,12 @@ set shiftwidth=4
 set softtabstop=4
 set background=dark
 set clipboard=unnamed
+set laststatus=2
+set encoding=utf-8
+set guifont=Inconsolata\ for\ Powerline.otf\ 10
 set nocompatible
+
+let g:airline_powerline_fonts = 1
 
 " JSBEAUTIFY shorcuts
 " for javascript
@@ -59,6 +65,8 @@ Plugin 'bling/vim-airline'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
+Plugin 'tpope/vim-fugitive'
+Plugin 'powerline/fonts'
 
 call vundle#end()
 filetype plugin indent on
