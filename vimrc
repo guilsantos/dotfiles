@@ -67,6 +67,11 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
 Plugin 'tpope/vim-fugitive'
 Plugin 'powerline/fonts'
+Plugin 'scrooloose/NERDTree'
+Plugin 'scrooloose/NERDCommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
