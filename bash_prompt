@@ -1,6 +1,6 @@
 # This prompt is a fork of paulirish
 
-default_username='guilherme'
+default_username='rafaellucio'
 
 if [[ -n "$ZSH_VERSION" ]]; then  # quit now if in zsh
     return 1 2> /dev/null || exit 1;
