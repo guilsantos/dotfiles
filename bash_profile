@@ -15,14 +15,9 @@ if [ -f ~/dotfiles/completion/npm-completion.bash ]; then
 	. ~/dotfiles/completion/npm-completion.bash
 fi
 
-
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
 
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-
-#THIS MUST BE AT THE END OF THE FILE FOR JENV TO WORK!!!
-[[ -s "/Users/guilherme/.jenv/bin/jenv-init.sh" ]] && source "/Users/guilherme/.jenv/bin/jenv-init.sh" && source "/Users/guilherme/.jenv/commands/completion.sh"
-function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

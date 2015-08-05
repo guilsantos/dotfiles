@@ -7,7 +7,7 @@ set t_Co=256
 syntax on
 " }}}
 
-iab gmg Guilherme Mangabeira Gregio<guilherme@gregio.net>
+iab ral Rafael Antonio Lucio<rafaelantoniolucio@gmail.com>
 
 "......................................................................ARQUIVO
 "" Sai fora na marra!
@@ -15,6 +15,7 @@ imap <F12> <esc>:wqa!<cr>
 map <F12> :wqa!<cr>
 " Abreviacoes-uteis para sua sanidade mental
 cab W w| cab Q q| cab Wq wq| cab wQ wq| cab WQ wq
+
 
 " Copy e paste
 nmap <F3> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
@@ -51,6 +52,8 @@ endif
 " Macros
 let @q='0f,xxd$a</a>0i<a href="pa">j@q'
 
+let g:airline_powerline_fonts = 1
+
 " JSBEAUTIFY shorcuts
 " for javascript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -76,6 +79,12 @@ Plugin 'ervandew/supertab'
 Plugin 'initrc/eclim-vundle'
 Plugin 'powerline/powerline'
 Plugin 'yosiat/oceanic-next-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ap/vim-css-color'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
