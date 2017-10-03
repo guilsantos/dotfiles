@@ -62,6 +62,6 @@ mkdir $HOME/.backup
 
 vim +PluginInstall +qall
 
-chsh -s /bin/zsh
+# chsh -s /bin/zsh
 echo FIM
 
