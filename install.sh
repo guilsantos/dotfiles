@@ -62,8 +62,6 @@ mkdir $HOME/.backup
 
 vim +PluginInstall +qall
 
-sh $HOME/dotfiles/brew/install.sh
-
 chsh -s /bin/zsh
 echo FIM
 
