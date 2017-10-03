@@ -15,9 +15,9 @@ TIMESTAMP=$(date +%s);
 #fi
 #sudo apt-get install -y zsh xclip git git-flow tig vim-gtk tmux python-pip curl software-properties-common python-software-properties
 #sudo apt-get install -y automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
-pip install --upgrade pip
-pip install git+git://github.com/Lokaltog/powerline 
-pip install awscli
+#pip install --upgrade pip
+#pip install git+git://github.com/Lokaltog/powerline 
+#pip install awscli
 
 #wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf 
 #wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf 
@@ -30,7 +30,7 @@ pip install awscli
 #
 #git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.3.0
 
-#git clone --recursive https://github.com/rafaellucio/dotfiles.git
+git clone --recursive https://github.com/rafaellucio/dotfiles.git
 
 for f in $(find ~/dotfiles/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md")
 do
