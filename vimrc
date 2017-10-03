@@ -7,7 +7,10 @@ set t_Co=256
 syntax on
 " }}}
 
-iab ral Rafael Antonio Lucio<rafaelantoniolucio@gmail.com>
+set backupdir=~/.backup//
+set directory=~/.backup//
+
+iab png Rafael Antonio Lucio<rafaelantoniolucio@gmail.com>
 
 "......................................................................ARQUIVO
 "" Sai fora na marra!
@@ -41,16 +44,22 @@ set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
 set background=dark
-
-if has("gui_running")
-	let s:uname = system("uname")
-	if s:uname == "Darwin\n"
-		set guifont=Inconsolata\ for\ Powerline:h15
-	endif
-endif
-
+set clipboard=unnamedplus
 " Macros
 let @q='0f,xxd$a</a>0i<a href="pa">j@q'
+let @t='_O<tr height="22" valign="top">
+<td align="left">
+<font size="2" color="#0b2266" face="arial">jo</font>
+</tr>
+</tr>j_'
+let @a='0wwi"f"xf"xf"xf"xf"xf"xf"xf"xf"xf"xf"xf"xj0@a'
+
+
+" CtrlP Config
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files . -co --exclude-standard|egrep -v "\.(git|svn|jpg|jpeg|png|gif)$"']
+
+" CtrlP Config
+map <C-n> :NERDTreeToggle<CR>
 
 let g:airline_powerline_fonts = 1
 
@@ -63,6 +72,11 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
+" Always show statusline
+set laststatus=2
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
+
 " Plugins {{{
 filetype off
 
@@ -74,20 +88,12 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'maksimr/vim-jsbeautify' 
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'scrooloose/nerdtree'
 Plugin 'ervandew/supertab'
-Plugin 'initrc/eclim-vundle'
 Plugin 'powerline/powerline'
-Plugin 'yosiat/oceanic-next-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ap/vim-css-color'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'tpope/vim-markdown',     { 'for': 'markdown' }
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
 " }}}
 
-" colo OceanicNext
+"colo OceanicNext
