@@ -69,9 +69,6 @@ brew install links
 brew install maven
 brew install python
 brew install tmux
-brew install nvm
-brew install mysql
-brew install mongodb
 brew install phantomjs
 ## brew install terminal-notifier
 

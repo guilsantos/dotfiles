@@ -4,14 +4,7 @@
 # to maintain cask .... 
 #     brew update && brew upgrade brew-cask && brew cleanup && brew cask cleanup` 
 
-
- #Install native apps
-#brew install caskroom/cask/brew-cask
-#brew tap caskroom/versions
-
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-# drives
 
 # dev
 brew cask install alfred
