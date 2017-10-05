@@ -16,6 +16,7 @@ brew cask install virtualbox
 brew cask install sts
 brew cask install mysqlworkbench
 brew cask install filezilla
+brew cask install postman
 # browsers
 brew cask install google-chrome
 brew cask install google-chrome-canary
