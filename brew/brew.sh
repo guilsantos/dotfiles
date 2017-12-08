@@ -71,9 +71,8 @@ brew install imagemagick --with-webp
 ## brew install tmux
 brew install tree
 brew install htop-osx
-brew insall links
+brew install links
 brew install python
-brew install nvm
 brew install phantomjs
 
 ## brew install android-platform-tools

@@ -10,7 +10,7 @@ syntax on
 set backupdir=~/.backup//
 set directory=~/.backup//
 
-iab gmg Guilherme Mangabeira Gregio<guilherme@gregio.net>
+iab png Rafael Antonio Lucio Rafael<rafaelantoniolucio@gmail.com>
 
 "......................................................................ARQUIVO
 "" Sai fora na marra!
@@ -44,11 +44,6 @@ set term=xterm-256color
 set termencoding=utf-8
 set background=dark
 set clipboard=unnamedplus
-" Macros
-let @q='0f,xxd$a</a>0i<a href="pa">j@q'
-let @t='_O<tr height="22" valign="top"><td align="left"><font size="2" color="#0b2266" face="arial">jo</font></tr></tr>j_'
-let @a='0wwi"f"xf"xf"xf"xf"xf"xf"xf"xf"xf"xf"xf"xj0@a'
-
 
 " CtrlP Config
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files . -co --exclude-standard|egrep -v "\.(git|svn|jpg|jpeg|png|gif)$"']

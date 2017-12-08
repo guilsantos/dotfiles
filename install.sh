@@ -15,22 +15,17 @@ TIMESTAMP=$(date +%s);
 #fi
 #sudo apt-get install -y zsh xclip git git-flow tig vim-gtk tmux python-pip curl software-properties-common python-software-properties
 #sudo apt-get install -y automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
+
+# Use sudo to run easy_intall
+# easy_install pip
 pip install --upgrade pip
-#pip install git+git://github.com/Lokaltog/powerline 
 pip install awscli
 
-#wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf 
-#wget https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf 
-#
-#sudo mv PowerlineSymbols.otf /usr/share/fonts/ 
-#sudo fc-cache -vf 
-#sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
-#
-#
-#
 #git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.3.0
 
-#git clone --recursive https://github.com/rafaellucio/dotfiles.git
+# git clone --recursive https://github.com/rafaellucio/dotfiles.git
+
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | zsh
 
 for f in $(find ~/dotfiles/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md")
 do
@@ -49,6 +44,7 @@ rm -rf "$HOME/.backup"
 rm -rf "$HOME/.bin"
 rm -rf "$HOME/.pgpass"
 rm -rf "$HOME/.aws"
+mkdir "$HOME/.backup"
 
 ln -s "$HOME/dotfiles/oh-my-zsh" "$HOME/.oh-my-zsh"
 ln -s "$HOME/dotfiles/bin" "$HOME/.bin"
@@ -59,6 +55,5 @@ ln -s "$HOME/dotfiles/ssh/aws" "$HOME/.aws"
 
 vim +PluginInstall +qall
 
-chsh -s /bin/zsh
+#chsh -s /bin/zsh
 echo FIM
-

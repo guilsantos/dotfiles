@@ -30,6 +30,7 @@ brew cask install java
 brew cask install macvim
 brew cask install virtualbox
 brew cask install visual-studio-code
+brew cask install slack
 # browsers
 brew cask install google-chrome
 brew cask install google-chrome-canary
