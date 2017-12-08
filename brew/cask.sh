@@ -12,32 +12,33 @@
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # drives
-brew cask install dropbox
-brew cask install google-drive
+#brew cask install dropbox
+#brew cask install google-drive
 
 # dev
+#brew cask install sts
+#brew cask install mysqlworkbench
+#brew cask install filezilla
+#brew cask install vagrant
+#brew cask install vagrant-manager
+#brew cask install intellij-idea
+#brew cask install sublime-text3
+#brew cask install atom
 brew cask install alfred
 brew cask install iterm2
-brew cask install sublime-text3
-brew cask install atom
 brew cask install java
 brew cask install macvim
 brew cask install virtualbox
-brew cask install sts
-brew cask install mysqlworkbench
-brew cask install filezilla
-brew cask install vagrant
-brew cask install vagrant-manager
-brew cask install intellij-idea
+brew cask install visual-studio-code
 # browsers
 brew cask install google-chrome
 brew cask install google-chrome-canary
 brew cask install firefox
 
 # less often
-brew cask install vlc
-brew cask install send-to-kindle
-brew cask install libreoffice
+#brew cask install vlc
+#brew cask install send-to-kindle
+#brew cask install libreoffice
 
 brew cleanup --force
 rm -f -r /Library/Caches/Homebrew/*
