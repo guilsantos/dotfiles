@@ -23,7 +23,17 @@ pip install awscli
 
 #git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.3.0
 
-# git clone --recursive https://github.com/rafaellucio/dotfiles.git
+
+#########################################################################
+#
+# Clone this repository using git --recursive option
+#
+#
+#git clone --recursive https://github.com/rafaellucio/dotfiles.git
+#
+#
+#########################################################################
+
 
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | zsh
 
@@ -53,7 +63,8 @@ ln -s "$HOME/dotfiles/ssh" "$HOME/.ssh"
 ln -s "$HOME/dotfiles/ssh/pgpass" "$HOME/.pgpass"
 ln -s "$HOME/dotfiles/ssh/aws" "$HOME/.aws"
 
+mkdir $HOME/.backup
+
 vim +PluginInstall +qall
 
-#chsh -s /bin/zsh
 echo FIM

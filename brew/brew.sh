@@ -56,28 +56,12 @@ brew install vim --override-system-vi
 
 
 # Install other useful binaries
-## brew install ack
 brew install git
-brew install imagemagick --with-webp
-## brew install node # This installs `npm` too using the recommended installation method
-## brew install pv
-## brew install rename
-## brew install terminal-notifier
-## brew install zopfli
-## brew install ffmpeg --with-libvpx
-## brew install maven
-## brew install mysql
-## brew install mongodb
-## brew install tmux
 brew install tree
 brew install htop-osx
 brew install links
 brew install python
 brew install phantomjs
-
-## brew install android-platform-tools
-## brew install pidcat   # colored logcat guy
-
 brew install zsh
 
 # Remove outdated versions from the cellar

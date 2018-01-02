@@ -3,6 +3,9 @@
 .vim/swaps/*
 .vim/undo
 
+# Ignore vim plugins
+vim/bundle/*
+
 # git credential file 
 .gitconfig.local
 

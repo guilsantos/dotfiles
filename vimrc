@@ -10,7 +10,7 @@ syntax on
 set backupdir=~/.backup//
 set directory=~/.backup//
 
-iab png Rafael Antonio Lucio Rafael<rafaelantoniolucio@gmail.com>
+iab png Rafael Antonio Lucio<rafaelantoniolucio@gmail.com>
 
 "......................................................................ARQUIVO
 "" Sai fora na marra!
@@ -18,6 +18,7 @@ imap <F12> <esc>:wqa!<cr>
 map <F12> :wqa!<cr>
 " Abreviacoes-uteis para sua sanidade mental
 cab W w| cab Q q| cab Wq wq| cab wQ wq| cab WQ wq
+
 
 " Copy e paste
 nmap <F3> :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
@@ -51,6 +52,8 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files . -co --exc
 " CtrlP Config
 map <C-n> :NERDTreeToggle<CR>
 
+let g:airline_powerline_fonts = 1
+
 " JSBEAUTIFY shorcuts
 " for javascript
 autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
@@ -77,11 +80,8 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'digitaltoad/vim-jade'
 Plugin 'ervandew/supertab'
 Plugin 'powerline/powerline'
-Plugin 'yosiat/oceanic-next-vim'
-Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 filetype plugin indent on
