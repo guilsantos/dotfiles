@@ -17,7 +17,8 @@ echo "Installing Oh My Zsh"
 curl -L http://install.ohmyz.sh | bash
 
 echo "Installing NVM"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+
 
 # Sudo List Files
 VSCODE="$HOME/dotfiles/vscode/install.sh"
