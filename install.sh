@@ -27,6 +27,7 @@ find $dotfilespath/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LIC
 	ln -s "$FILE" "$HOME/.${FILE##*/}"
 done
 
+echo "Backup ssh .dotfiles"
 if [ -d "$HOME/.ssh" ]; then
     if [ -L $HOME/.ssh ]; then
         rm -rf "$HOME/.ssh"
@@ -35,12 +36,14 @@ if [ -d "$HOME/.ssh" ]; then
     fi
 fi
 
+echo "Remove .dotfiles paths"
 rm -rf "$HOME/.backup"
 rm -rf "$HOME/.bin"
 rm -rf "$HOME/.pgpass"
 rm -rf "$HOME/.aws"
 rm -rf "$HOME/.npmrc"
 
+echo "Add simbolic link .dotfiles"
 mkdir "$HOME/.backup"
 ln -s "$HOME/dotfiles/bin" "$HOME/.bin"
 ln -s "$HOME/dotfiles/ssh" "$HOME/.ssh"
