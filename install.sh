@@ -14,7 +14,7 @@ sh $dotfilespath/osx/install.sh
 sudo sh $dotfilespath/debian/install.sh
 
 echo "Installing Oh My Zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -L http://install.ohmyz.sh | bash
 
 # Sudo List Files
 VSCODE="$HOME/dotfiles/vscode/install.sh"
