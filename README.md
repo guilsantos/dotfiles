@@ -6,7 +6,7 @@
 ## Instalação
 
 ```sh
-curl -L https://raw.githubusercontent.com/rafaellucio/dotfiles/master/install.sh | bash
+sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/rafaellucio/dotfiles/master/install.sh)"
 ```
 
 ## Desenvolvimento

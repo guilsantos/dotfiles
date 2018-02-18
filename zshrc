@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+export ZSH=/root/.oh-my-zsh
 #ZSH_TMUX_AUTOSTART=true
 ZSH_NVM_AUTO_LOAD=true
 
