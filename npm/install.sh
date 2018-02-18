@@ -1,10 +1,5 @@
 #!/bin/bash
 
-if [ ! -d $HOME/.nvm ]; then
-    echo "Installing Nvm"
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
-fi
-
 echo "Nvm running"
 . $HOME/.nvm/nvm.sh
 

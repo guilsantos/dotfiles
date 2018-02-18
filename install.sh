@@ -16,16 +16,17 @@ sudo sh $dotfilespath/debian/install.sh
 echo "Installing Oh My Zsh"
 curl -L http://install.ohmyz.sh | bash
 
+echo "Installing NVM"
+curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+
 # Sudo List Files
 VSCODE="$HOME/dotfiles/vscode/install.sh"
-NPM="$HOME/dotfiles/npm/install.sh"
 
 find $dotfilespath -mindepth 2 -name 'install.sh'|grep -v -E "(osx|debian)"| while read FILE; do
     echo "Running: $FILE"
     
     case $FILE in
         $VSCODE) sudo sh $FILE ;;
-        $NPM) sudo sh $FILE ;;
         *) sh $FILE ;;
     esac
 done
