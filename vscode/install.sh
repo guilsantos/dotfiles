@@ -16,3 +16,4 @@ elif [[ $UNAME == 'Darwin' ]]; then
     ln -sf "$dotfilespath/vscode/snippets/" ~/Library/Application\ Support/Code/User/snippets
 else 
     exit
+fi
