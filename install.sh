@@ -23,7 +23,7 @@ done
 
 echo "Configuring .dotfiles"
 find $dotfilespath/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md" | while read FILE; do
-	rm -f "$HOME/.${FILE##*/}"	
+	sudo rm -f "$HOME/.${FILE##*/}"	
 	ln -s "$FILE" "$HOME/.${FILE##*/}"
 done
 
