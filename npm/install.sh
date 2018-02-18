@@ -2,7 +2,7 @@
 
 echo "Nvm running"
 sleep 3
-. $HOME/.zshrc
+. $HOME/.nvm/nvm.sh
 sleep 3
 nvm install node
 
