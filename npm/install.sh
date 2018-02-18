@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Nvm running"
-. $HOME/.nvm/nvm.sh
+source $HOME/.zshrc
 
 nvm install node
 
