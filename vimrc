@@ -2,6 +2,8 @@
 set nocompatible
 " }}}
 
+source $HOME/dotfiles/vim/plug.vim
+
 " Syntax highlighting {{{
 set t_Co=256
 syntax on
@@ -62,29 +64,9 @@ autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
 " for css or scss
 autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
-set rtp+=~/dotfiles/vim/bundle/powerline/powerline/bindings/vim
 " Always show statusline
 set laststatus=2
 " Use 256 colours (Use this setting only if your terminal supports 256 colours)
 set t_Co=256
-
-" Plugins {{{
-filetype off
-
-set rtp+=~/dotfiles/vim/bundle/Vundle.vim
-call vundle#begin('~/dotfiles/vim/bundle')
-Plugin 'gmarik/Vundle.vim'
-" Adicionar outros plugins
-" Plugin ''
-Plugin 'maksimr/vim-jsbeautify' 
-Plugin 'mattn/emmet-vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'ervandew/supertab'
-Plugin 'powerline/powerline'
-
-call vundle#end()
-filetype plugin indent on
-" }}}
 
 "colo OceanicNext

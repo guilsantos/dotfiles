@@ -1,70 +1,51 @@
 #!/usr/bin/env bash
+set -e 
 
 TIMESTAMP=$(date +%s);
+dotfilespath="$HOME/dotfiles"
+dotrepo="https://github.com/rafaellucio/dotfiles.git"
 
-#if ! type git >/dev/null 2>&1 ; then
-#    sudo apt-get install -y git
-#    sh ./install.sh
-#    exit 0;
-#fi
-#
-#if ! type vim >/dev/null 2>&1 ; then
-#    sudo apt-get install -y vim-gtk
-#    sh ./install.sh
-#    exit 0;
-#fi
-#sudo apt-get install -y zsh xclip git git-flow tig vim-gtk tmux python-pip curl software-properties-common python-software-properties
-#sudo apt-get install -y automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev
+if [ ! -d "$dotfilespath" ]; then
+    printf "Fetching dotfiles...\n"
+    git clone --recursive "$dotrepo" "$dotfilespath"
+fi;
 
-# Use sudo to run easy_intall
-# easy_install pip
-pip install --upgrade pip
-pip install awscli
+sh $dotfilespath/osx/install.sh
+sh $dotfilespath/debian/install.sh
 
-#git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch v0.3.0
+echo "Installing Oh My Zsh"
+curl -L http://install.ohmyz.sh | bash
 
-
-#########################################################################
-#
-# Clone this repository using git --recursive option
-#
-#
-#git clone --recursive https://github.com/rafaellucio/dotfiles.git
-#
-#
-#########################################################################
-
-
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | zsh
-
-for f in $(find ~/dotfiles/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md")
-do
-	rm -f "$HOME/.${f##*/}"	
-	ln -s "$f" "$HOME/.${f##*/}"
+find $dotfilespath -mindepth 2 -name 'install.sh'|grep -v -E "(osx|debian)"| while read FILE; do
+    echo "Running: $FILE"
+    sh $FILE
 done
 
-if [[ -L $HOME/.ssh ]]  && [[ "$(readlink $HOME/.ssh)" = "$HOME/dotfiles/ssh" ]] ; then
-	rm -rf "$HOME/.ssh"
-else
-	mv "$HOME/.ssh" "$HOME/ssh-bkp-$TIMESTAMP"
+echo "Configuring .dotfiles"
+find $dotfilespath/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md" | while read FILE; do
+	rm -f "$HOME/.${FILE##*/}"	
+	ln -s "$FILE" "$HOME/.${FILE##*/}"
+done
+
+if [ -d "$HOME/.ssh" ]; then
+    if [ -L $HOME/.ssh ]; then
+        rm -rf "$HOME/.ssh"
+    else
+        mv "$HOME/.ssh" "$HOME/ssh-bkp-$TIMESTAMP"
+    fi
 fi
 
-rm -rf "$HOME/.oh-my-zsh"
 rm -rf "$HOME/.backup"
 rm -rf "$HOME/.bin"
 rm -rf "$HOME/.pgpass"
 rm -rf "$HOME/.aws"
+rm -rf "$HOME/.npmrc"
+
 mkdir "$HOME/.backup"
-
-ln -s "$HOME/dotfiles/oh-my-zsh" "$HOME/.oh-my-zsh"
 ln -s "$HOME/dotfiles/bin" "$HOME/.bin"
-
 ln -s "$HOME/dotfiles/ssh" "$HOME/.ssh"
 ln -s "$HOME/dotfiles/ssh/pgpass" "$HOME/.pgpass"
 ln -s "$HOME/dotfiles/ssh/aws" "$HOME/.aws"
 
-mkdir $HOME/.backup
-
-vim +PluginInstall +qall
-
-echo FIM
+chsh -s /bin/zsh
+echo "Finish!!!"

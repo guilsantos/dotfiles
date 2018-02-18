@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![Logo of the project](./dotfiles-logo.png)
 
 # dotfiles - Mac/Linux
@@ -5,11 +6,8 @@
 
 ## Instalação
 
-```shell
-cd /home/seu-usuario
-git clone --recursive https://github.com/rafaellucio/dotfiles.git
-cd dotfiles
-sh install.sh
+```sh
+curl -L https://raw.githubusercontent.com/guilhermegregio/dotfiles/master/install.sh | bash
 ```
 
 ## Desenvolvimento
@@ -57,3 +55,26 @@ sh install.sh
    |---bundle
    |-----Vundle.vim
 ```
+
+## Referências
+
+- [https://github.com/ignovak/dotfiles](https://github.com/ignovak/dotfiles)
+- [https://github.com/captbaritone/dotfiles](https://github.com/captbaritone/dotfiles)
+- [https://github.com/gHashTag/dotfiles](https://github.com/gHashTag/dotfiles)
+- [https://github.com/paulirish/dotfiles](https://github.com/paulirish/dotfiles)
+- [https://github.com/sapegin/dotfiles](https://github.com/sapegin/dotfiles)
+- [https://github.com/maxpou/dotfiles](https://github.com/maxpou/dotfiles)
+- [https://github.com/exAspArk/dotfiles](https://github.com/exAspArk/dotfiles)
+- [https://github.com/naustudio/dotfiles](https://github.com/naustudio/dotfiles)
+- [https://medium.com/@crashybang/should-front-end-developers-learn-a-tool-like-vim-bb49a7627313](https://medium.com/@crashybang/should-front-end-developers-learn-a-tool-like-vim-bb49a7627313)
+- [https://github.com/webpro/awesome-dotfiles](https://github.com/webpro/awesome-dotfiles)
+
+
+
+
+
+
+
+
+
+
