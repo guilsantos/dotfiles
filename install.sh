@@ -16,14 +16,21 @@ sudo sh $dotfilespath/debian/install.sh
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Sudo List Files
+VSCODE="$HOME/dotfiles/vscode/install.sh"
+
 find $dotfilespath -mindepth 2 -name 'install.sh'|grep -v -E "(osx|debian)"| while read FILE; do
     echo "Running: $FILE"
-    sudo sh $FILE
+    
+    case $FILE in
+        $VSCODE) sudo sh $FILE ;;
+        *) sh $FILE ;;
+    esac
 done
 
 echo "Configuring .dotfiles"
 find $dotfilespath/* -maxdepth 0 -type f -not -name "install.sh" -not -name "LICENSE" -not -name "README.md" | while read FILE; do
-	sudo rm -f "$HOME/.${FILE##*/}"	
+	rm -f "$HOME/.${FILE##*/}"	
 	ln -s "$FILE" "$HOME/.${FILE##*/}"
 done
 
