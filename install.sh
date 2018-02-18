@@ -11,14 +11,14 @@ if [ ! -d "$dotfilespath" ]; then
 fi;
 
 sh $dotfilespath/osx/install.sh
-sh $dotfilespath/debian/install.sh
+sudo sh $dotfilespath/debian/install.sh
 
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 find $dotfilespath -mindepth 2 -name 'install.sh'|grep -v -E "(osx|debian)"| while read FILE; do
     echo "Running: $FILE"
-    sh $FILE
+    sudo sh $FILE
 done
 
 echo "Configuring .dotfiles"
