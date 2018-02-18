@@ -1,13 +1,12 @@
-<<<<<<< HEAD
 ![Logo of the project](./dotfiles-logo.png)
 
-# dotfiles - Mac/Linux
+# dotfiles - Mac/Linux (Debian/Ubuntu)
 > Repositório concentra todos os arquivos de configuração necessário para o start-up da máquina desenvolvimento.
 
 ## Instalação
 
 ```sh
-curl -L https://raw.githubusercontent.com/guilhermegregio/dotfiles/master/install.sh | bash
+curl -L https://raw.githubusercontent.com/rafaellucio/dotfiles/master/install.sh | bash
 ```
 
 ## Desenvolvimento
