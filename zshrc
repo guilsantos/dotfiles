@@ -92,5 +92,5 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
  
 if [[ ! $TERM =~ screen ]]; then
-    exec tmux attach
+    exec tmux 
 fi
