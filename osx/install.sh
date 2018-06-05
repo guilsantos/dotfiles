@@ -24,4 +24,4 @@ brew upgrade
 brew cleanup
 
 echo "Settings MacOsx preferences"
-sh ./set-preferences.sh
+# sh ./set-preferences.sh
