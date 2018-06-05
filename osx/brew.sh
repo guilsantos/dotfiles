@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-brew tap caskroom/cask
-
 brew install vim --with-override-system-vi --with-client-server
 brew install wget --enable-iri
 
@@ -21,10 +19,9 @@ brew install \
     watch \
     watchman \
     python \
-    zsh \
     docker \
     docker-compose \
     docker-machine \
     xhyve \
-    docker-machine-driver-xhyve
     kubernetes-cli \
+    docker-machine-driver-xhyve
