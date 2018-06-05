@@ -13,9 +13,8 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'maksimr/vim-jsbeautify' 
 Plug 'mattn/emmet-vim'
-Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'digitaltoad/vim-jade'
+Plug 'scrooloose/syntastic'
 Plug 'ervandew/supertab'
 Plug 'powerline/powerline'
 Plug 'yosiat/oceanic-next-vim'
